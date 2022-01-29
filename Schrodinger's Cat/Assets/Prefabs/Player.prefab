@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 212064061491315838}
   - component: {fileID: 95391780594314510}
   - component: {fileID: 50915408107096866}
+  - component: {fileID: 1558448921139374935}
   - component: {fileID: 8509783501685719824}
-  - component: {fileID: 6082575806313374961}
   - component: {fileID: 1824045667}
   m_Layer: 13
   m_Name: Player
@@ -50,13 +50,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minGroundNormalY: 0.9
-  gravityModifier: 1
+  gravityModifier: 2
   velocity: {x: 0, y: 0}
   jumpAudio: {fileID: 8300000, guid: 67975c08d56ceb147bad38572d805aa8, type: 3}
   respawnAudio: {fileID: 8300000, guid: e18959d46b63f3c4c8cc020a433cf848, type: 3}
   ouchAudio: {fileID: 8300000, guid: 6c05149e5a2fba64ba172e25a61074b7, type: 3}
   maxSpeed: 3
-  jumpTakeOffSpeed: 7
+  jumpTakeOffSpeed: 8
   jumpState: 0
   collider2d: {fileID: 0}
   audioSource: {fileID: 0}
@@ -76,6 +76,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -87,6 +89,7 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -150,6 +153,19 @@ Rigidbody2D:
   m_SleepingMode: 0
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &1558448921139374935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1208144871472054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb535b82888b27428b49a239654a68a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHP: 2
 --- !u!82 &8509783501685719824
 AudioSource:
   m_ObjectHideFlags: 0
@@ -246,19 +262,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &6082575806313374961
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1208144871472054}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffad43bb006db4856a9c527b89b48db9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHP: 1
 --- !u!61 &1824045667
 BoxCollider2D:
   m_ObjectHideFlags: 0
