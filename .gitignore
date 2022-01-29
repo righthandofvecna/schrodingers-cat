@@ -1,0 +1,11 @@
+**/Temp
+**/Logs
+**/*-lock
+**/Library
+**/StateCache
+**/ShaderCache
+**/PackageCache
+**/ScriptAssemblies
+**/APIUpdater
+
+ProjectCache.md5
