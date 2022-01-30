@@ -46,7 +46,7 @@ namespace Platformer.Mechanics
         /// <summary>
         /// Increment the HP of the entity.
         /// </summary>
-        public bool Increment()
+        public virtual bool Increment()
         {
             currentHP = Mathf.Clamp(currentHP + 1, 0, maxHP);
             return true;
@@ -90,6 +90,7 @@ namespace Platformer.Mechanics
         void Awake()
         {
             currentHP = maxHP;
+            Increment();
         }
     }
 }
