@@ -25,7 +25,7 @@ namespace Platformer.Gameplay
                 Simulation.Schedule<PlayerDeath>(2);
             } else {
                 player.animator.SetBool("alive", true);
-                Simulation.Schedule<PlayerLife>(2);
+                Simulation.Schedule<PlayerLife>(3f);
             }
 
         }
