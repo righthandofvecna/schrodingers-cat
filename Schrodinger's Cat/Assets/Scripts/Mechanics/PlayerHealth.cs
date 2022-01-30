@@ -2,6 +2,7 @@ using System;
 using Platformer.Gameplay;
 using UnityEngine;
 using static Platformer.Core.Simulation;
+using Platformer.UI;
 
 namespace Platformer.Mechanics
 {
@@ -18,9 +19,22 @@ namespace Platformer.Mechanics
                 else {
 
                 }
+                GameObject healthbar = GameObject.FindWithTag("Healthbar");
+                if (healthbar != null) {
+                    healthbar.GetComponent<HealthbarController>().SetHP(base.HP);
+                }
                 return true;
             }
             return false;
+        }
+
+        public override bool Increment() {
+            bool result = base.Increment();
+            GameObject healthbar = GameObject.FindWithTag("Healthbar");
+            if (healthbar != null) {
+                healthbar.GetComponent<HealthbarController>().SetHP(base.HP);
+            }
+            return result;
         }
     }
 }
