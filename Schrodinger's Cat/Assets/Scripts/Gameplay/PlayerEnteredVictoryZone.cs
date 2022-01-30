@@ -18,6 +18,9 @@ namespace Platformer.Gameplay
         public override void Execute()
         {
             model.player.animator.SetTrigger("victory");
+            if (model.player.audioSource && model.player.victoryAudio)
+                model.player.audioSource.PlayOneShot(model.player.victoryAudio);
+            model.victoryUI.SetActive(true);
             model.player.controlEnabled = false;
         }
     }

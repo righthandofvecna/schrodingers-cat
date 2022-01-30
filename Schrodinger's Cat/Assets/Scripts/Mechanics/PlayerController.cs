@@ -20,6 +20,7 @@ namespace Platformer.Mechanics
         public AudioClip dieAudio;
         public AudioClip respawnAudio;
         public AudioClip ouchAudio;
+        public AudioClip victoryAudio;
 
         /// <summary>
         /// Max horizontal speed of the player.
