@@ -19,11 +19,15 @@ namespace Platformer.Gameplay
             Simulation.SimulationPaused = true;
             var player = model.player;
             player.controlEnabled = false;
-            
-            model.virtualCamera.m_Follow = null;
-            model.virtualCamera.m_LookAt = null;
 
-            Simulation.Schedule<PlayerDeath>(2);
+            if (Random.value < 0.5f) {
+                player.animator.SetBool("dead", true);
+                Simulation.Schedule<PlayerDeath>(2);
+            } else {
+                player.animator.SetBool("alive", true);
+                Simulation.Schedule<PlayerLife>(2);
+            }
+
         }
     }
 }
