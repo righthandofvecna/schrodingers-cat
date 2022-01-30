@@ -61,6 +61,8 @@ MonoBehaviour:
   collider2d: {fileID: 0}
   audioSource: {fileID: 0}
   health: {fileID: 0}
+  projectile: {fileID: 1163875554491401944, guid: b77ee67bd1301624cb35f7b536389a00,
+    type: 3}
   controlEnabled: 1
 --- !u!212 &212064061491315838
 SpriteRenderer:
@@ -166,6 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHP: 2
+  invincibility: 0.5
 --- !u!82 &8509783501685719824
 AudioSource:
   m_ObjectHideFlags: 0

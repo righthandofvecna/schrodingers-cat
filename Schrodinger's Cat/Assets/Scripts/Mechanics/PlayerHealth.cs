@@ -10,11 +10,17 @@ namespace Platformer.Mechanics
     /// </summary>
     public class PlayerHealth : Health
     {
-        public override void Decrement() {
-            base.Decrement();
-            if (!base.IsAlive) {
-                Schedule<PlayerDeath>();
+        public override bool Decrement() {
+            if (base.IsAlive && base.Decrement()) {
+                if (!base.IsAlive) {
+                    Schedule<PlayerDeath>();
+                }
+                else {
+
+                }
+                return true;
             }
+            return false;
         }
     }
 }

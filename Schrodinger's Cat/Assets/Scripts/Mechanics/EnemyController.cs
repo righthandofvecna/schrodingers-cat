@@ -31,13 +31,19 @@ namespace Platformer.Mechanics
             spriteRenderer = GetComponent<SpriteRenderer>();
         }
 
-        void OnCollisionEnter2D(Collision2D collision)
+        void OnCollisionStay2D(Collision2D collision)
         {
             var player = collision.gameObject.GetComponent<PlayerController>();
             if (player != null)
             {
                 var ev = Schedule<PlayerEnemyCollision>();
                 ev.player = player;
+                ev.enemy = this;
+            }
+
+            if (collision.gameObject.tag == "Projectile") {
+                var ev = Schedule<ProjectileCollision>();
+                ev.projectile = collision.gameObject;
                 ev.enemy = this;
             }
         }
