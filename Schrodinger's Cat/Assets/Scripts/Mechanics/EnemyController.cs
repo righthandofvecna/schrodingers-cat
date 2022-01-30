@@ -17,6 +17,7 @@ namespace Platformer.Mechanics
 
         internal PatrolPath.Mover mover;
         internal AnimationController control;
+        internal Animator animator;
         internal Collider2D _collider;
         internal AudioSource _audio;
         SpriteRenderer spriteRenderer;
@@ -29,10 +30,14 @@ namespace Platformer.Mechanics
             _collider = GetComponent<Collider2D>();
             _audio = GetComponent<AudioSource>();
             spriteRenderer = GetComponent<SpriteRenderer>();
+            animator = GetComponent<Animator>();
         }
 
         void OnCollisionStay2D(Collision2D collision)
         {
+            if (!control.enabled) {
+                return;
+            }
             var player = collision.gameObject.GetComponent<PlayerController>();
             if (player != null && !Platformer.Core.Simulation.SimulationPaused)
             {
@@ -43,6 +48,9 @@ namespace Platformer.Mechanics
         }
 
         void OnTriggerEnter2D(Collider2D collider) {
+            if (!control.enabled) {
+                return;
+            }
             if (collider.gameObject.tag == "Projectile") {
                 var ev = Schedule<ProjectileCollision>();
                 ev.projectile = collider.gameObject;
@@ -52,7 +60,7 @@ namespace Platformer.Mechanics
 
         void Update()
         {
-            if (Platformer.Core.Simulation.SimulationPaused) {
+            if (Platformer.Core.Simulation.SimulationPaused || !control.enabled) {
                 control.move.x = 0f;
             }
             else if (path != null)

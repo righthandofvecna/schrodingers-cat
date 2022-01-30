@@ -1,33 +1,33 @@
 fileFormatVersion: 2
-guid: 0d22f52a800554566bb7a5bd62041458
+guid: d07b0f6e394cb474a8d58eb2c0be2af9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 21300000
-    second: Unity_Baddie_Death_0
+      213: -8688392260014441854
+    second: snake_0
   - first:
-      213: 21300002
-    second: Unity_Baddie_Death_1
+      213: 8964828684589300045
+    second: snake_1
   - first:
-      213: 21300004
-    second: Unity_Baddie_Death_2
+      213: -3946499141775193120
+    second: snake_2
   - first:
-      213: 21300006
-    second: Unity_Baddie_Death_3
+      213: 4479720658561634729
+    second: snake_3
   - first:
-      213: 21300008
-    second: Unity_Baddie_Death_4
+      213: -3399037153431705778
+    second: snake_4
   - first:
-      213: 21300010
-    second: Unity_Baddie_Death_5
+      213: -4978297785292227087
+    second: snake_5
   - first:
-      213: 21300012
-    second: Unity_Baddie_Death_6
+      213: 5910609365090145371
+    second: snake_6
   - first:
-      213: 21300014
-    second: Unity_Baddie_Death_7
+      213: -498161800001825481
+    second: snake_7
   externalObjects: {}
-  serializedVersion: 10
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -47,6 +47,7 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -55,9 +56,9 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -66,10 +67,10 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 300
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -78,9 +79,13 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -89,11 +94,11 @@ TextureImporter:
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
-    crunchedCompression: 1
+    crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 2048
@@ -101,11 +106,11 @@ TextureImporter:
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
-    crunchedCompression: 1
+    crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: WebGL
     maxTextureSize: 2048
@@ -113,22 +118,22 @@ TextureImporter:
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
-    crunchedCompression: 1
+    crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Unity_Baddie_Death_0
+      name: snake_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 126
-        width: 128
-        height: 126
+        y: 200
+        width: 500
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -136,20 +141,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 052c96b5e021246d6ab4b0784a26383c
-      internalID: 21300000
+      spriteID: 28af598c541ac6780800000000000000
+      internalID: -8688392260014441854
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Unity_Baddie_Death_1
+      name: snake_1
       rect:
         serializedVersion: 2
-        x: 128
-        y: 126
-        width: 128
-        height: 126
+        x: 500
+        y: 200
+        width: 500
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -157,20 +162,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cc287aa10fa9f4fd5a5b0e6a55e121cb
-      internalID: 21300002
+      spriteID: d497d21e038796c70800000000000000
+      internalID: 8964828684589300045
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Unity_Baddie_Death_2
+      name: snake_2
       rect:
         serializedVersion: 2
-        x: 256
-        y: 126
-        width: 128
-        height: 126
+        x: 1000
+        y: 200
+        width: 500
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,20 +183,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3da439af153a441a18f47430e5d9e0f4
-      internalID: 21300004
+      spriteID: 0eb0b14a0f73b39c0800000000000000
+      internalID: -3946499141775193120
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Unity_Baddie_Death_3
+      name: snake_3
       rect:
         serializedVersion: 2
-        x: 384
-        y: 126
-        width: 128
-        height: 126
+        x: 0
+        y: 100
+        width: 500
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -199,20 +204,62 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1b0d623874ec94b36a722d5d225fd6a8
-      internalID: 21300006
+      spriteID: 9a19b82543a2b2e30800000000000000
+      internalID: 4479720658561634729
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Unity_Baddie_Death_4
+      name: snake_4
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 100
+        width: 500
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e472953c7b134d0d0800000000000000
+      internalID: -3399037153431705778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: snake_5
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 100
+        width: 500
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fdfa895a8889eab0800000000000000
+      internalID: -4978297785292227087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: snake_6
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 128
-        height: 126
+        width: 500
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -220,20 +267,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1fa7eef4db62244fa88d6f78a2b86bcb
-      internalID: 21300008
+      spriteID: b549b4cd6e3b60250800000000000000
+      internalID: 5910609365090145371
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Unity_Baddie_Death_5
+      name: snake_7
       rect:
         serializedVersion: 2
-        x: 128
+        x: 500
         y: 0
-        width: 128
-        height: 126
+        width: 500
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -241,50 +288,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a42ef3fd397274f85be63e2a2fbcc041
-      internalID: 21300010
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Unity_Baddie_Death_6
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 0
-        width: 128
-        height: 126
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4bbca2818854949fbb30cccd958b7c1b
-      internalID: 21300012
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Unity_Baddie_Death_7
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 0
-        width: 128
-        height: 126
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 215856bd67f064da395d8173219ac292
-      internalID: 21300014
+      spriteID: 735d8367b7c2619f0800000000000000
+      internalID: -498161800001825481
       vertices: []
       indices: 
       edges: []
@@ -292,7 +297,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: a05e63f4d61174334869d05840004e21
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
