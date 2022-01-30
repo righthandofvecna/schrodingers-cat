@@ -40,17 +40,22 @@ namespace Platformer.Mechanics
                 ev.player = player;
                 ev.enemy = this;
             }
+        }
 
-            if (collision.gameObject.tag == "Projectile") {
+        void OnTriggerEnter2D(Collider2D collider) {
+            if (collider.gameObject.tag == "Projectile") {
                 var ev = Schedule<ProjectileCollision>();
-                ev.projectile = collision.gameObject;
+                ev.projectile = collider.gameObject;
                 ev.enemy = this;
             }
         }
 
         void Update()
         {
-            if (path != null)
+            if (Platformer.Core.Simulation.SimulationPaused) {
+                control.move.x = 0f;
+            }
+            else if (path != null)
             {
                 if (mover == null) mover = path.CreateMover(control.maxSpeed * 0.5f);
                 control.move.x = Mathf.Clamp(mover.Position.x - transform.position.x, -1, 1);

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Platformer.Gameplay;
 using static Platformer.Core.Simulation;
+using static System.Math;
 using Platformer.Model;
 using Platformer.Core;
 
@@ -68,7 +69,10 @@ namespace Platformer.Mechanics
                 if (Input.GetButtonDown("Fire1")) {
                     GameObject bullet = Instantiate(projectile);
                     bullet.transform.position = this.transform.position;
-                    bullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(1f, 1f), ForceMode2D.Impulse);
+                    Vector2 force = new Vector2(1f , 1f);
+                    if (spriteRenderer.flipX)
+                        force.x = -1f;
+                    bullet.GetComponent<Rigidbody2D>().AddForce(force, ForceMode2D.Impulse);
                     Schedule<DestroyEntity>(5f).toDestroy = bullet;
                 }
             }
