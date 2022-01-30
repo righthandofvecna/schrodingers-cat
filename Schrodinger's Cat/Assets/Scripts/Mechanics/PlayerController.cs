@@ -16,6 +16,8 @@ namespace Platformer.Mechanics
     public class PlayerController : KinematicObject
     {
         public AudioClip jumpAudio;
+        public AudioClip liveAudio;
+        public AudioClip dieAudio;
         public AudioClip respawnAudio;
         public AudioClip ouchAudio;
 
