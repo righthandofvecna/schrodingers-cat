@@ -40,6 +40,12 @@ namespace Platformer.Mechanics
                 ev.player = player;
                 ev.enemy = this;
             }
+
+            if (collision.gameObject.tag == "Projectile") {
+                var ev = Schedule<ProjectileCollision>();
+                ev.projectile = collision.gameObject;
+                ev.enemy = this;
+            }
         }
 
         void Update()

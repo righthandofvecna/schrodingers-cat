@@ -32,6 +32,7 @@ namespace Platformer.Mechanics
         /*internal new*/ public Collider2D collider2d;
         /*internal new*/ public AudioSource audioSource;
         public Health health;
+        public GameObject projectile;
         public bool controlEnabled = true;
 
         bool jump;
@@ -62,6 +63,13 @@ namespace Platformer.Mechanics
                 {
                     stopJump = true;
                     Schedule<PlayerStopJump>().player = this;
+                }
+
+                if (Input.GetButtonDown("Fire1")) {
+                    GameObject bullet = Instantiate(projectile);
+                    bullet.transform.position = this.transform.position;
+                    bullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(1f, 1f), ForceMode2D.Impulse);
+                    Schedule<DestroyEntity>(5f).toDestroy = bullet;
                 }
             }
             else

@@ -21,6 +21,11 @@ namespace Platformer.Mechanics
         public float invincibility = 0.5f;
 
         /// <summary>
+        /// The amount of hit points an entity has remaining.
+        /// </summary>
+        public int HP => currentHP;
+
+        /// <summary>
         /// Indicates if the entity should be considered 'alive'.
         /// </summary>
         public bool IsAlive => currentHP > 0;
