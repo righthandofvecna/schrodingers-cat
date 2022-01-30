@@ -16,8 +16,11 @@ namespace Platformer.Mechanics
     public class PlayerController : KinematicObject
     {
         public AudioClip jumpAudio;
+        public AudioClip liveAudio;
+        public AudioClip dieAudio;
         public AudioClip respawnAudio;
         public AudioClip ouchAudio;
+        public AudioClip victoryAudio;
 
         /// <summary>
         /// Max horizontal speed of the player.

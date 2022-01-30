@@ -21,6 +21,7 @@ namespace Platformer.UI
             while (hpList.Count < hp) {
                 GameObject newHpSprite = Instantiate(hitPointSprite);
                 newHpSprite.transform.SetParent(this.transform);
+                newHpSprite.transform.localScale = new Vector3(1f,1f,1f);
                 hpList.Add(newHpSprite);
             }
         }
