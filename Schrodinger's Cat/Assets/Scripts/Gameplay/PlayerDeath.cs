@@ -21,6 +21,7 @@ namespace Platformer.Gameplay
             model.virtualCamera.m_LookAt = null;
             // player.collider.enabled = false;
             player.controlEnabled = false;
+            player.deathMessage.SetActive(false);
             
             Simulation.Schedule<PlayerSpawn>(2);
         }
