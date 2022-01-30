@@ -1,5 +1,6 @@
 using Platformer.Core;
 using Platformer.Mechanics;
+using static Platformer.Core.Simulation;
 
 namespace Platformer.Gameplay
 {
@@ -13,10 +14,12 @@ namespace Platformer.Gameplay
 
         public override void Execute()
         {
-            enemy._collider.enabled = false;
+            // enemy._collider.enabled = false;
             enemy.control.enabled = false;
+            enemy.animator.SetTrigger("death");
             if (enemy._audio && enemy.ouch)
                 enemy._audio.PlayOneShot(enemy.ouch);
+            Schedule<DestroyEntity>(0.5f).toDestroy = enemy.gameObject;
         }
     }
 }

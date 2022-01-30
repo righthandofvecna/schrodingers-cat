@@ -13,11 +13,12 @@ namespace Platformer.Mechanics
     {
         public override bool Decrement() {
             if (base.IsAlive && base.Decrement()) {
+                GetComponent<Animator>().SetTrigger("hurt");
+                PlayerController player = GetComponent<PlayerController>();
+                if (player && player.audioSource && player.ouchAudio)
+                    player.audioSource.PlayOneShot(player.ouchAudio);
                 if (!base.IsAlive) {
-                    Schedule<PlayerDeath>();
-                }
-                else {
-
+                    Schedule<CollapseQuantumSuperposition>();
                 }
                 GameObject healthbar = GameObject.FindWithTag("Healthbar");
                 if (healthbar != null) {

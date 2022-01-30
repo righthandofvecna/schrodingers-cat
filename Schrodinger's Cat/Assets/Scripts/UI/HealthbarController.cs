@@ -11,11 +11,7 @@ namespace Platformer.UI
     {
         public GameObject hitPointSprite;
 
-        List<GameObject> hpList;
-
-        public void Awake() {
-            hpList = new List<GameObject>();
-        }
+        List<GameObject> hpList = new List<GameObject>();
         
         public void SetHP(int hp) {
             while (hpList.Count > Mathf.Clamp(hp, 0, hpList.Count+1)) {

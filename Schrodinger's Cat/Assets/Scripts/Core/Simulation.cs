@@ -11,6 +11,7 @@ namespace Platformer.Core
     /// </summary>
     public static partial class Simulation
     {
+        public static bool SimulationPaused = false;
 
         static HeapQueue<Event> eventQueue = new HeapQueue<Event>();
         static Dictionary<System.Type, Stack<Event>> eventPools = new Dictionary<System.Type, Stack<Event>>();
