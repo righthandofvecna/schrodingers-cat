@@ -46,7 +46,10 @@ namespace Platformer.Gameplay
             }
             else
             {
-                Schedule<PlayerDeath>();
+                var playerHealth = player.GetComponent<Health>();
+                if (playerHealth != null && playerHealth.Decrement()) {
+                    // player.Bounce(new Vector2(-30f,-30f));
+                }
             }
         }
     }
