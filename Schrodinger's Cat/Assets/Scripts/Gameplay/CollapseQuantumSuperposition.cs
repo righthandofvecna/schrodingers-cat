@@ -19,6 +19,7 @@ namespace Platformer.Gameplay
             Simulation.SimulationPaused = true;
             var player = model.player;
             player.controlEnabled = false;
+            player.deathMessage.SetActive(true);
 
             if (Random.value < 0.5f) {
                 player.animator.SetBool("dead", true);

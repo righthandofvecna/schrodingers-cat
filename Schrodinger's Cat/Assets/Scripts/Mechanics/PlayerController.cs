@@ -23,6 +23,8 @@ namespace Platformer.Mechanics
         public AudioClip ouchAudio;
         public AudioClip victoryAudio;
 
+        public GameObject deathMessage;
+
         /// <summary>
         /// Max horizontal speed of the player.
         /// </summary>

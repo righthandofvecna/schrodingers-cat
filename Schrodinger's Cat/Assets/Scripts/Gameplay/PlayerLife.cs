@@ -19,6 +19,7 @@ namespace Platformer.Gameplay
             var player = model.player;
             player.health.Revive(2.5f);
             player.animator.SetBool("alive", false);
+            player.deathMessage.SetActive(false);
             Simulation.Schedule<EnablePlayerInput>(1f);
 
         }
