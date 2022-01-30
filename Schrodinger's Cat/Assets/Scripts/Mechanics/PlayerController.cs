@@ -72,7 +72,9 @@ namespace Platformer.Mechanics
                     Vector2 force = new Vector2(1f , 1f);
                     if (spriteRenderer.flipX)
                         force.x = -1f;
-                    bullet.GetComponent<Rigidbody2D>().AddForce(force, ForceMode2D.Impulse);
+                    Rigidbody2D bulletBody = bullet.GetComponent<Rigidbody2D>();
+                    bulletBody.AddForce(force, ForceMode2D.Impulse);
+                    bulletBody.AddTorque(7f, ForceMode2D.Impulse);
                     Schedule<DestroyEntity>(5f).toDestroy = bullet;
                 }
             }
