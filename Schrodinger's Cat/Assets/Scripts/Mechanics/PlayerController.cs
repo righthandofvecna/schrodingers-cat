@@ -18,6 +18,7 @@ namespace Platformer.Mechanics
         public AudioClip jumpAudio;
         public AudioClip liveAudio;
         public AudioClip dieAudio;
+        public AudioClip peanutAudio;
         public AudioClip respawnAudio;
         public AudioClip ouchAudio;
         public AudioClip victoryAudio;
@@ -30,6 +31,8 @@ namespace Platformer.Mechanics
         /// Initial jump velocity at the start of a jump.
         /// </summary>
         public float jumpTakeOffSpeed = 7;
+
+        public Vector3 peanutFirePoint;
 
         public JumpState jumpState = JumpState.Grounded;
         private bool stopJump;
@@ -70,8 +73,9 @@ namespace Platformer.Mechanics
                 }
 
                 if (Input.GetButtonDown("Fire1")) {
+                    animator.SetTrigger("peanut");
                     GameObject bullet = Instantiate(projectile);
-                    bullet.transform.position = this.transform.position;
+                    bullet.transform.position = this.transform.position + peanutFirePoint;
                     Vector2 force = new Vector2(1f , 1f);
                     if (spriteRenderer.flipX)
                         force.x = -1f;
@@ -79,6 +83,9 @@ namespace Platformer.Mechanics
                     bulletBody.AddForce(force, ForceMode2D.Impulse);
                     bulletBody.AddTorque(7f, ForceMode2D.Impulse);
                     Schedule<DestroyEntity>(5f).toDestroy = bullet;
+                    if (audioSource && peanutAudio) {
+                        audioSource.PlayOneShot(peanutAudio);
+                    }
                 }
             }
             else
